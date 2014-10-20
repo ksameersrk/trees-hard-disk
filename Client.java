@@ -1,13 +1,20 @@
+import java.util.Scanner;
 public class Client
 {
-	public static void main(String args[])
-	{
-		int[] k = { 20, 10, 30, 5,25,  40, 15, 12,18};
-		arrayTree t = new arrayTree();
-		for(int e : k)
-		{
-			t.insert(e);
-		}
-		t.disp();
-	}
+    public static void main(String[] args)
+    {
+        int x;
+        TreesArray tr = new TreesArray();
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the numbers.");
+        for(int i=0; i<8; i++)
+        {
+            x = in.nextInt();
+            tr.insert(x);
+        }
+        
+        tr.display();
+        //tr.countNodes();
+        //tr.countLeaves();
+    }
 }
