@@ -1,3 +1,4 @@
+//We have implemented a binary search tree here, not a binary tree
 public class arrayTree
 {
 	int arrayTree[] = new int[100];
