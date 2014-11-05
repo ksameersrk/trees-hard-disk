@@ -1,0 +1,21 @@
+import java.util.*;
+public class Client
+{
+    public static void main(String[] args)
+    {
+        BinaryTree t = new BinaryTree();
+        try
+        {
+            t.createRoot("A",0);
+            t.setLeft("B",0);
+            t.setRight("C",0);
+            t.setLeft("D",1);
+            t.setRight("E",3);
+            
+        }
+        catch(Exception e)
+        {
+        }
+        t.display();
+    }
+}
