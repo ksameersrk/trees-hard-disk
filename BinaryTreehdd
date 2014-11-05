@@ -1,0 +1,45 @@
+import java.io.*;
+public class BinaryTree
+{
+    //Object obj;
+    //Object arr[] = new Object[20];
+    String arr[] = new String[20];
+    //int root;
+    public BinaryTree()
+    {
+        
+    }
+    public void createRoot(String str, int index) throws IOException
+    {
+        FileWriter fwriter = new FileWriter("data3.txt",true);
+        PrintWriter file = new PrintWriter(fwriter);
+        arr[index] = str;
+        file.print(index);
+        file.println(" "+str);
+        file.close();
+    }
+    public void setLeft(String str, int root) throws IOException
+    {
+        FileWriter fwriter = new FileWriter("data3.txt",true);
+        PrintWriter file = new PrintWriter(fwriter);
+        arr[2*root+1] = str;
+        file.print(2*root+1);
+        file.println(" "+str);
+        file.close();
+    }
+    public void setRight(String str, int root) throws IOException
+    {
+        FileWriter fwriter = new FileWriter("data3.txt",true);
+        PrintWriter file = new PrintWriter(fwriter);
+        arr[2*root+2] = str;
+        file.print(2*root+2);
+        file.println(" "+str);
+        file.close();
+    }
+    public void display()
+    {
+        for(int i=0; i<10; i++)
+        {
+            System.out.println(arr[i]);
+        }
+    }
